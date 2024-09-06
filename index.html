@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9jaPolls - Your Voice Matters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-green-600 text-white p-4">
+        <h1 class="text-2xl font-bold">9jaPolls</h1>
+    </header>
+
+    <main class="container mx-auto mt-8 p-4">
+        <section id="current-poll" class="bg-white rounded-lg shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Current Poll</h2>
+            <div id="poll-question"></div>
+            <div id="poll-options" class="mt-4"></div>
+            <button id="submit-vote" class="mt-4 bg-green-500 text-white px-4 py-2 rounded">Submit Vote</button>
+        </section>
+
+        <section id="results" class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold mb-4">Results</h2>
+            <div id="poll-results"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
