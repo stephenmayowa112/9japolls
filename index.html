@@ -1,30 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>9jaPolls - Your Voice Matters</title>
+    <title>9jaPolls: Nigeria's Voice, Digitally Amplified</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+    <style>
+        .section-fade {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-green-600 text-white p-4">
-        <h1 class="text-2xl font-bold">9jaPolls</h1>
+
+<body class="bg-gray-100 dark:bg-gray-900 font-sans transition-colors duration-200">
+    <header class="bg-[#123332] dark:bg-gray-800 text-white py-4 px-6 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="images/9japolls.png" alt="9jaPolls Logo" class="w-10 h-10 mr-2">
+                <h1 class="text-2xl font-bold">9jaPolls</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="menuButton" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+                <nav id="navbar" class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="#overview" class="hover:text-green-200">Overview</a></li>
+                        <li><a href="#features" class="hover:text-green-200">Features</a></li>
+                        <li><a href="#impact" class="hover:text-green-200">Impact</a></li>
+                        <li><a href="#challenges" class="hover:text-green-200">Challenges</a></li>
+                    </ul>
+                </nav>
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main class="container mx-auto mt-8 p-4">
-        <section id="current-poll" class="bg-white rounded-lg shadow-md p-6 mb-8">
-            <h2 class="text-xl font-semibold mb-4">Current Poll</h2>
-            <div id="poll-question"></div>
-            <div id="poll-options" class="mt-4"></div>
-            <button id="submit-vote" class="mt-4 bg-green-500 text-white px-4 py-2 rounded">Submit Vote</button>
-        </section>
+<main class="container mx-auto mt-8 p-4">
+    <section id="overview" class="mb-12 section-fade">
+        <h2 class="text-3xl font-bold mb-4">Nigeria's Voice, Digitally Amplified</h2>
+        <p class="text-lg mb-4">9jaPolls is a digital polling platform designed specifically for Nigerians to
+            express their opinions on local and national issues. By leveraging mobile and web technologies, we aim
+            to increase civic engagement and bridge the gap between citizens and policymakers.</p>
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-2">Our Goals:</h3>
+            <ul class="list-disc pl-6">
+                <li>Increase civic engagement among Nigerians</li>
+                <li>Provide real-time data on public opinion to policymakers</li>
+                <li>Foster transparency in governance through data-driven insights</li>
+                <li>Empower citizens to have a say in matters affecting their communities</li>
+            </ul>
+        </div>
+    </section>
 
-        <section id="results" class="bg-white rounded-lg shadow-md p-6">
-            <h2 class="text-xl font-semibold mb-4">Results</h2>
-            <div id="poll-results"></div>
-        </section>
-    </main>
+    <section id="features" class="mb-12 section-fade">
+        <h2 class="text-3xl font-bold mb-4">Key Features</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Accessibility</h3>
+                <ul class="list-disc pl-6">
+                    <li>Web Application with responsive design</li>
+                    <li>Mobile Apps for Android and iOS</li>
+                    <li>SMS Integration for feature phones</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Advanced Technology</h3>
+                <ul class="list-disc pl-6">
+                    <li>AI and Machine Learning for data analysis</li>
+                    <li>Blockchain for transparent results</li>
+                    <li>Geolocation-based polling</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">User-Friendly</h3>
+                <ul class="list-disc pl-6">
+                    <li>Multi-language support</li>
+                    <li>Real-time results visualization</li>
+                    <li>Social media integration</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Security & Transparency</h3>
+                <ul class="list-disc pl-6">
+                    <li>User authentication and verification</li>
+                    <li>End-to-end encryption</li>
+                    <li>Open API for researchers</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <script src="app.js"></script>
+    <section id="impact" class="mb-12 section-fade">
+        <h2 class="text-3xl font-bold mb-4">Impact and Benefits</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">For Citizens</h3>
+                <ul class="list-disc pl-6">
+                    <li>Easy access to voice opinions</li>
+                    <li>Increased awareness of public sentiment</li>
+                    <li>Platform for community-level decision making</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">For Government</h3>
+                <ul class="list-disc pl-6">
+                    <li>Real-time feedback on policies</li>
+                    <li>Data-driven decision-making tools</li>
+                    <li>Improved citizen engagement and trust</li>
+                </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">For NGOs and Researchers</h3>
+                <ul class="list-disc pl-6">
+                    <li>Valuable data for social research</li>
+                    <li>Platform for conducting targeted surveys</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="challenges" class="mb-12 section-fade">
+        <h2 class="text-3xl font-bold mb-4">Addressing Nigerian-Specific Challenges</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Digital Divide</h3>
+                <p>SMS integration and USSD capabilities to ensure accessibility for all.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Diverse Demographics</h3>
+                <p>Multi-language support and intuitive UI to cater to all Nigerians.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Data Costs</h3>
+                <p>Partnerships with telcos for zero-rating of the platform.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold mb-2">Credibility Concerns</h3>
+                <p>Robust verification system and transparent methodology.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <footer class="bg-[#123332] dark:bg-gray-800 text-white py-4 px-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 9jaPolls. Nigeria's Voice, Digitally Amplified.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Existing scroll handling script
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section-fade');
+            sections.forEach(section => {
+                if (isElementInViewport(section)) {
+                    section.style.opacity = 1;
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Call once to check initial state
+
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const html = document.documentElement;
+
+        darkModeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menuButton');
+        const navbar = document.getElementById('navbar');
+
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+        });
+    </script>
 </body>
+
 </html>
